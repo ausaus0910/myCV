@@ -117,6 +117,26 @@ main{
     box-shadow: 0px 5px 12px 1px rgba(112, 111, 111, 0.25);
     font-size: 22px;
 }
+.tagline { 
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.tagline:hover, .tagline:focus-visible {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.2);
+  background-color: #475cb8;
+  color: #ffffff;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .tagline:hover, .tagline:focus-visible {
+    transform: scale(1.07);
+  }
+}
 
 dl{
     display: grid;
@@ -267,6 +287,37 @@ section{
     margin: 10px 0px;
     border-radius: 1rem;
     box-shadow: 0px 5px 12px 1px rgba(112, 111, 111, 0.25);
+}
+.tagline-edu h4,
+.tagline-edu p{
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.tagline-edu p:hover,
+.tagline-edu p:focus-visible {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.2);
+  background-color: #0fa40a;
+  color: #ffffff;
+}
+.tagline-edu h4:hover, .tagline-edu h4:focus-visible{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.2);
+    background-color: #9935f0;
+    color: #ffffff;
+}
+@media (prefers-reduced-motion: no-preference) {
+    .tagline-edu h4:hover,
+    .tagline-edu h4:focus-visible,
+    .tagline-edu p:hover,
+    .tagline-edu p:focus-visible {
+    transform: scale(1.07);
+  }
 }
 
 /* Experience */
@@ -421,7 +472,7 @@ section{
         width: 100%;
         gap: 1rem 2rem;
     }
-
+     
     .intro{
         grid-template-columns: 1fr;
         grid-template-areas:
